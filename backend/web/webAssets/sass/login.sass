@@ -1,0 +1,181 @@
+body
+    //overflow: hidden
+    
+.page
+    background-color: #000
+    height: 100%
+    margin-bottom: -32px
+    position: relative
+    z-index: 1
+    display: flex
+
+.login_bkgd_image
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+    opacity: .4
+    height: 100%
+    width: auto
+    object-fit: cover
+    display: block
+
+.login-form-wrapper
+    will-change: transform, opacity
+    margin: auto
+    display: flex
+    flex-flow: row
+    z-index: 3
+    align-items: center
+    justify-content: space-around
+    transition: all 1.2s cubic-bezier(0.36, 0.27, 0.32, 0.99)
+    transform: translate(0, -300px)
+    opacity: 0
+    width: 70%
+
+.login-form-wrapper.showLogin
+    transition: all 0.8s cubic-bezier(0.36, 0.27, 0.32, 0.99)
+    transform: translate(0, 0)
+    opacity: 1
+
+.login_form_logo
+    width: 344px
+    +respond-to(sl)
+
+.login_form_title
+    font-size: 2.2em
+    color: $white
+    -webkit-font-smoothing: antialiased
+    margin-bottom: 24px
+
+.form-horizontal
+    padding: 24px
+    background-color: transparent
+    color: $white
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    justify-content: flex-start
+    border-radius: 1px
+    max-width: 300px
+    width: 264px
+    height: 400px
+    overflow: hidden
+    +box-shadow(0,12px,28px,-5px,rgba(0,0,0,0.3)) 
+
+.login-form-recover-pass
+    height: 350px
+
+.form-horizontal .form-group
+    margin: 0
+    width: 100%
+    position: relative
+
+
+.form_label
+    font-size: 1.5em
+    font-weight: $light
+
+
+.form_input
+    position: relative
+    display: flex
+    &:focus
+        border: none
+        box-shadow: none
+        outline: none
+    
+.form_icon
+    position: absolute
+    top: 0px
+    left: 8px
+    display: flex
+    width: 20px
+    height: 100%
+    align-items: center
+    justify-content: center
+    transition: transform 0.3s ease
+
+
+.form-control
+    border: none
+    box-shadow: none
+    outline: none
+    border-radius: 3px
+    border: 1px solid $white
+    height: 40px
+    padding-left: 34px 
+    &:focus
+        border: none
+        box-shadow: none
+        outline: none
+        border: 2px solid $accent 
+
+
+.has-success .form-control
+    &:focus
+        border: none
+        box-shadow: none
+        outline: none
+        border: 2px solid $success
+
+.has-error .form-control
+    border: none
+    border-right: 2px solid $error
+    box-shadow: none
+    border: 1px solid $error
+    &:focus
+        border: none
+        box-shadow: none
+        outline: none
+        border: 1px solid $error
+
+.btn-primary
+    background-color: $accent
+    border-color: $accent
+    font-size: 1.5em
+    font-weight: $medium
+    padding: 8px 12px
+    width: 100%
+    &:hover
+        background-color: $error
+        border-color: $error
+    &:focus
+        background-color: $error
+        outline: 0
+        box-shadow: none
+        border-color: $error
+    &:down
+        background-color: $error
+        outline: 0
+        box-shadow: none
+        border-color: $error
+    &:active
+        background-color: $error
+        box-shadow: none
+
+.btn-primary:not(:disabled):not(.disabled):active
+    background-color: $error
+    border-color: $error
+    outline: 0
+    box-shadow: none
+
+.btn-primary:not(:disabled):not(.disabled):active:focus
+    background-color: $error
+    border-color: $error
+    box-shadow: none
+
+.recuperar-pass-title
+    color: $white
+    font-size: 1.5em
+    font-weight: $light
+    margin-bottom: 8px
+    margin-top: 32px
+    text-align: left
+.recuperar-passwhite
+    color: $white
+.recuperar-pass-btn
+    color: $white
+    display: inline-block
+    &:hover
+        color: $error

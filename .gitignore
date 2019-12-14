@@ -1,0 +1,5 @@
+backend/config/*
+frontend/config/*
+common/config/*
+vendor/*
+runtime/*

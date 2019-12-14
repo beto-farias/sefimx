@@ -1,0 +1,85 @@
+
+body::-webkit-scrollbar
+    display: none
+
+section 
+    width: 100%
+
+#main_container
+    overflow: hidden
+    background-color: black
+    height: calc( 100vh )
+    width: auto
+    display: flex
+    overflow-x: auto
+    color: $white
+
+.loadingWindow
+    pointer-events: none
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+
+
+.loadingWindow .loader
+    margin: auto
+    font-size: 5rem
+
+
+
+
+
+.tool_box
+    display: none
+
+.login_bkgd_image
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+    opacity: .2
+    height: 100%
+    width: auto
+    object-fit: cover
+    display: block
+
+.inner_container_menu
+    position: relative
+    z-index: 1000
+
+.inner_container_menu,
+.inner_container
+    height: 100%
+    display: flex
+    flex-flow: column
+    position: relative
+    background-color: $greyDark
+    border-right: 1px solid $black
+    box-shadow: 2px 0px 10px rgba($black,0.3)
+    padding: 0
+    min-width: 120px
+    transition: transform .4s cubic-bezier(0.13, 0.81, 0.58, 1)
+    .body
+        height: 100%
+        position: relative
+
+.inner_container
+    z-index: 90
+
+
+
+
+//Bootstrap overrides
+
+
+//General
+.disabled
+    opacity: .2
+
+.mt16
+    margin-top: 16px !important
+
+
+.col50
+    width: 50%
+    padding: 8px

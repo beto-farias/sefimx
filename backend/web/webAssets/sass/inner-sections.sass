@@ -1,0 +1,552 @@
+
+//Sections
+
+.menu-body
+    width: 100%
+    height: 100%
+    position: relative
+    overflow: auto
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: flex-start
+
+.small_size
+    position: relative
+    width: 250px
+    min-width: 250px
+    transform: translate(-200px,0)
+
+.medium_size
+    position: relative
+    width: 350px
+    min-width: 350px
+    transform: translate(-300px,0)
+
+
+.large_size
+    position: relative
+    width: 550px
+    min-width: 450px
+    transform: translate(-90%,0)
+
+
+.full_size
+    position: relative
+    width: 100%
+    min-width: 450px
+    transform: translate(-90%,0)
+
+.slideRight
+    transform: translate(0,0)
+
+.lvl1
+    z-index: 900
+.lvl2
+    z-index: 800
+.lvl3
+    z-index: 700
+.lvl3
+    z-index: 600
+.lvl3
+    z-index: 500
+
+.loader-bar
+    position: absolute
+    top: 0
+    right: 0
+    height: 20%
+    width: 3px
+    background-color: $accent
+    transition: height .3 ease
+
+.section-title-wrapper
+    width: 100%
+    background-color: $black
+    position: sticky
+    top: 0
+    left: 0
+    z-index: 90
+    overflow: hidden
+    cursor: pointer
+    min-height: 86px
+    display: flex
+    &:hover
+        .section-header-image
+            opacity: 1
+
+.section-header-image
+    position: absolute
+    top: 0
+    left: 0
+    margin-top: -1px
+    z-index: 1
+    width: 100%
+    object-fit: contain 
+    opacity: .3
+    transition: opacity 1s ease
+
+.section-header-image.active
+    opacity: 1
+
+.section-title
+    text-transform: uppercase
+    width: 90%
+    padding: 16px
+    margin-bottom: 0px
+    min-height: 86px
+    vertical-align: middle
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 2
+
+.section-close-icon
+    position: absolute
+    top: 14px
+    right: 14px
+    color: $accent
+    font-size: 2rem
+    z-index: 3
+
+.section-list-btn
+    width: 100%
+    padding: 16px
+    border-top: 1px dashed $black
+    transform: background 1s ease
+    background-color: transparent
+    text-transform: uppercase
+    font-weight: $bold
+    border-radius: 0
+    i
+        margin: 0 8px
+        margin-left: -10px
+    &:hover
+        background-color: $accent
+        color: $black
+    &:focus
+        border: none
+
+.section-filter-toolbar
+    height: auto
+    width: 100%
+    background-color: transparent
+    display: flex
+    align-items: center
+    justify-content: center
+    input
+        background-color: $primary
+        border-color: $primary
+        color: $accent
+        font-size: 1.2rem
+        text-transform: uppercase
+        padding: 0 16px
+        border-radius: 3px
+        height: 40px !important
+        min-height: 40px
+        box-shadow: none
+        &:active,
+        &:focus
+            border-color: $secondary
+            outline: 0
+
+
+.item-list
+    background-color: transparent
+    width: 100%
+    height: calc( 100% - 231px )
+    list-style: none
+    padding: 0
+    margin-bottom: 0px
+    position: relative
+    z-index: 90
+    overflow: auto
+    overflow-y: scroll
+    flex-grow: 1
+    
+
+::-webkit-scrollbar
+    display: none
+    width: 0px
+    scrollbar-base-color: black
+    scrollbar-arrow-color: grey
+    scrollbar-track-color: black
+
+.item-list-item
+    position: relative
+    width: 100%
+    height: 8rem
+    border-top: 1px solid $grey
+    display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    transition: all 1s ease
+    &:hover
+        background-color: $greyLight
+        .item-list-item-edit
+            transition: all .3s ease
+            display: flex
+            opacity: 1
+
+.item-list-item-edit
+    width: 10%
+    height: 100%
+    background-color: $greyLight
+    display: none
+    align-items: center
+    justify-content: center
+    color: $white
+    transition: all .3s ease
+    opacity: 0
+    &:hover
+        color: $black
+        background-color: $accent
+    a
+        height: 100%
+        color: $greyUltraLight
+
+.item-list-item-link
+    font-size: 1rem
+    color: $greyUltraLight
+    text-decoration: none
+    text-transform: uppercase
+    letter-spacing: 1px
+    max-width: 90%
+    width: 85%
+    height: 100%
+    line-height: 1.2em
+    padding-left: 16px
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    justify-content: center
+    &:hover,
+    &:focus
+        color: $white
+        text-decoration: none
+
+.multi-text
+    height: 9.5rem
+
+.item-list-item-link-title,
+.item-list-item-link-desc
+    font-size: 1rem
+    height: auto
+    display: flex
+    width: auto
+    margin-bottom: .5rem
+
+.item-list-item-link-title
+    font-size: 1.8rem
+    font-weight: $bold
+    margin-bottom: 1rem
+
+.system-icon
+    margin: auto
+    background-color: transparent
+    border: none
+    cursor: pointer
+
+.square
+    border-radius: 0
+
+
+
+.second-lvl-panel
+    .item-list
+        height: calc( 100% - 306px )
+
+
+
+//Edition + Data - Panel
+.section-toolbar
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    margin-top: -16px
+    position: relative
+    z-index: 100
+    a
+        color: $white
+        display: flex
+        text-decoration: none
+        &:hover
+            text-decoration: none
+            color: $white
+
+
+.toolbar-icon
+    width: 32px
+    height: 32px
+    background-color: $accent
+    border-radius: 3px
+    margin-right: 16px
+    i
+        margin: auto
+        width: 100%
+        display: flex
+        font-size: 1.5em
+        &:before
+            margin: auto
+.cancel-icon
+    background-color: $error
+.trash-icon
+    background-color: $error
+
+
+//Forms
+.form-wrapper
+    // height: calc(100vh - 86px)
+    height: auto
+    width: 100%
+    overflow: hidden
+    overflow-y: auto
+    position: relative
+    padding: 16px
+    padding-bottom: 0px
+    display: flex
+    flex-grow: 1
+
+
+.data-form
+    font-size: 1.4rem
+    height: 100%
+    display: flex
+    flex-flow: column
+    .control-label
+        color: darken($greyUltraLight, 30)
+        font-weight: $regular
+        letter-spacing: 1px
+        margin-bottom: 0
+
+
+.form-columns-wrapper
+    display: flex
+    width: 100%
+    height: 100%
+
+.form-group-wrapper
+    margin-bottom: 24px
+
+.form-group
+    input,
+    select
+        background-color: $black
+        border-color: $greyDark
+        color: $white
+        font-size: 1.2rem
+        text-transform: uppercase
+        padding: 0 16px
+        border-radius: 3px
+        height: 40px !important
+        min-height: 40px
+        &:focus
+            border-color: $accent
+            background-color: $greyDark
+            color: $white
+
+.form-btn
+    width: calc( 100% + 32px )
+    transform: translate(-16px)
+    height: 54px
+    border-radius: 0
+    margin-top: 24px
+    font-size: 1.2em
+    font-weight: $regular
+    text-transform: uppercase
+    flex-grow: 1
+
+
+.vehiculo-detalles-llantas
+    min-height: 700px
+
+.diagrama-content-wrapper
+    width: 100%
+    height: auto
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    margin-top: -16px
+    padding-bottom: 5rem
+
+.diagrama-wrapper
+    width: 30%
+    max-width: 260px
+    background-color: transparent
+
+.tire-list
+    background-color: transparent
+    width: 100%
+    height: auto
+    padding-top: 4rem
+
+.tire-item
+    float: left
+    width: 50%
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    margin-bottom: 12px
+
+.tire-item-position
+    font-size: 1.2rem
+    margin-top: 8px
+    padding: .2rem .5rem
+    border-radius: 3px
+
+.detalles-diagrama-wrapper
+    flex-grow: 1
+    padding: 2rem
+    padding-top: 9rem
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    border-left: 1px solid $black
+    label
+        color: $greyUltraLight
+    span
+        font-size: 2rem
+
+.form-group-wrapper
+    background-color: transparent
+
+
+.clientespatios-form,
+.inventariovehiculos-form
+    margin: auto
+    // height: calc(100vh - 118px)
+    height: 100%
+    width: 100%
+
+.qr-code
+    max-height: 86px
+    overflow: hidden
+    position: relative
+    span
+        height: 100%
+        width: 100%
+        background-color: $primary
+        position: absolute
+        opacity: 0
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all .3s ease-in
+        i
+            margin: auto
+            font-size: 3rem   
+    &:hover, 
+    &:focus
+        span
+            opacity: 1
+
+.editable
+    width: 100%
+
+
+.vehicle-type
+    font-size: 1.3rem
+    text-align: center
+    margin-top: 3rem
+
+.vehicle-section-divider
+    display: block
+    height: 5rem
+    width: 100%
+    background-color: transparent
+    clear: both
+
+.tire-item-double
+    width: 25%
+
+.llanta_selected
+    span
+        background: $accent
+        color: $primary
+
+.llantas_acciones
+    margin-right: 16px
+
+.llanta_accion
+    
+
+.section-timeline-wrapper
+    width: 100%
+    padding: 2rem
+    flex-grow: 1
+    position: relative
+    z-index: -1
+.timeline
+    position: relative
+
+.timeline-bar
+    display: block
+    width: 2px
+    border-radius: 2px
+    height: 1200px
+    background-color: darken($white,20)
+    position: absolute
+    top: -2rem
+    left: -1rem
+
+.timeline-card
+    padding: 3rem
+    border-radius: 3px
+    background-color: $black
+    margin-left: .8rem
+    position: relative
+    margin-bottom: 4rem
+    font-size: 2rem
+    &::before
+        position: absolute
+        top: 1rem
+        left: -10px
+        content: ""
+        display: block
+        width: 0 
+        height: 0 
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent 
+        border-right: 10px solid $black 
+
+
+.card-label
+    display: block
+    font-size: 1rem
+    color: darken($white,30)
+    margin-bottom: .5rem
+    text-transform: uppercase
+    margin-top: 2rem
+
+.card-label-big
+    color: $white
+    font-size: 2rem
+    margin-top: 0
+
+.card-label-description
+    margin-top: 2px
+    display: block
+
+.col-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: center
+
+
+
+.dgom-table
+    height: calc(100vh - 113px)
+    // background-color: red
+
+    th 
+        min-width: 100px
+        // background-color: $secondary
+        padding: 1rem 3rem
+        vertical-align: middle
